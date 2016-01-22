@@ -16,6 +16,6 @@ model = metamodel.model_from_file("example.cafe")
 model_export(model, "model.dot")
 graph = pydot.graph_from_dot_file("model.dot")
 graph.write_png("model.png")
-
-
-generator.generate("painter_template.java", "painter.java", {"canvas" : model})
+ 
+ 
+# generator.generate("painter_template.java", "painter.java", {"canvas" : model})

@@ -1,0 +1,61 @@
+Kafic:
+	"Kafic begin"
+	naziv_kafica=STRING
+		nivo*=Nivo
+	"Kafic end"
+;
+
+	
+Nivo:
+	"Nivo"
+	naziv_nivoa=STRING ':'
+	'Duzina=' Duzina=INT
+	'Sirina=' Sirina=INT
+	'Enterijer:'
+		element*=Element
+	"Kraj Nivoa"	
+;
+	
+Element:
+	"Element"
+	naziv_elementa=STRING ':'
+		'Oblici:'
+		oblik*=Oblik
+	"Kraj Elementa"
+;
+
+Oblik:
+Linija|Trougao|Pravougaonik|Elipsa
+;
+
+
+Tacka:
+	'x=' x=INT ',' 'y=' y=INT
+;
+
+	
+Linija:
+	'Linija:'
+	tacka*=Tacka[";"]
+;
+
+	
+Trougao:
+	'Trougao:'
+	tacka*=Tacka[";"]
+;
+
+
+Pravougaonik:
+	'Pravougaonik:'
+	tacka*=Tacka
+;
+
+	
+Elipsa:
+	'Elipsa:'
+	'centar: '
+	tacka=Tacka
+		'poluprecnik1=' r1=INT
+		'poluprecnik2=' r2=INT
+;

@@ -1,0 +1,43 @@
+
+    digraph xtext {
+    fontname = "Bitstream Vera Sans"
+    fontsize = 8
+    node[
+        shape=record,
+        style=filled,
+        fillcolor=aliceblue
+    ]
+    edge[dir=black,arrowtail=empty]
+
+
+51497392 -> 52438240 [label="nivo:0" arrowtail=diamond dir=both]
+52438240 -> 52438520 [label="element:0" arrowtail=diamond dir=both]
+52438520 -> 52439248 [label="oblik:0" arrowtail=diamond dir=both]
+52439248 -> 52439360 [label="tacka" arrowtail=diamond dir=both]
+52439360[label="{:Tacka|+x:int=50\l+y:int=30\l}"]
+52439248[label="{:Elipsa|+r1:int=12\l+r2:int=13\l}"]
+52438520[label="{:Element|+naziv_elementa:unicode=okrugli_sto\l}"]
+52438240 -> 52438576 [label="element:1" arrowtail=diamond dir=both]
+52438576 -> 52439416 [label="oblik:0" arrowtail=diamond dir=both]
+52439416 -> 52439528 [label="tacka" arrowtail=diamond dir=both]
+52439528[label="{:Tacka|+x:int=50\l+y:int=30\l}"]
+52439416[label="{:Elipsa|+r1:int=12\l+r2:int=13\l}"]
+52438576 -> 52439472 [label="oblik:1" arrowtail=diamond dir=both]
+52439472 -> 52439696 [label="tacka:0" arrowtail=diamond dir=both]
+52439696[label="{:Tacka|+x:int=43\l+y:int=25\l}"]
+52439472 -> 52439752 [label="tacka:1" arrowtail=diamond dir=both]
+52439752[label="{:Tacka|+x:int=53\l+y:int=35\l}"]
+52439472[label="{:Pravougaonik|}"]
+52438576[label="{:Element|+naziv_elementa:unicode=stolica\l}"]
+52438240 -> 52439136 [label="element:2" arrowtail=diamond dir=both]
+52439136 -> 52439640 [label="oblik:0" arrowtail=diamond dir=both]
+52439640 -> 52439920 [label="tacka:0" arrowtail=diamond dir=both]
+52439920[label="{:Tacka|+x:int=43\l+y:int=25\l}"]
+52439640 -> 52439976 [label="tacka:1" arrowtail=diamond dir=both]
+52439976[label="{:Tacka|+x:int=53\l+y:int=35\l}"]
+52439640[label="{:Pravougaonik|}"]
+52439136[label="{:Element|+naziv_elementa:unicode=sank\l}"]
+52438240[label="{:Nivo|+naziv_nivoa:unicode=Prizemlje\l+Duzina:int=10\l+Sirina:int=23\l}"]
+51497392[label="{:Kafic|+naziv_kafica:unicode=Skochko\l}"]
+
+}
