@@ -1,9 +1,4 @@
-{% macro packageAndImports(imports) %}
-	{% for packageAndImport in imports %}
-{{packageAndImport}}
-	{% endfor %}
-{% endmacro %}
-{{packageAndImports(imports)}}
+
 
 public class CafePainter {
 

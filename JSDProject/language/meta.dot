@@ -10,54 +10,54 @@
     edge[dir=black,arrowtail=empty]
 
 
-47998600[ label="{Tacka|+x:INT\l+y:INT\l}"]
+47081496[ label="{Tacka|+x:INT\l+y:INT\l}"]
 
-48000488 -> 47998600[arrowtail=diamond, dir=both, headlabel="tacka 0..*"]
-48000488[ label="{Trougao|}"]
+47083384 -> 47081496[arrowtail=diamond, dir=both, headlabel="tacka 0..*"]
+47083384[ label="{Trougao|}"]
 
-48001432 -> 47998600[arrowtail=diamond, dir=both, headlabel="tacka 0..*"]
-48001432[ label="{Pravougaonik|}"]
+47084328 -> 47081496[arrowtail=diamond, dir=both, headlabel="tacka 0..*"]
+47084328[ label="{Pravougaonik|}"]
 
-48002376 -> 47998600[arrowtail=diamond, dir=both, headlabel="tacka "]
-48002376[ label="{Elipsa|+r1:INT\l+r2:INT\l}"]
+47085272 -> 47081496[arrowtail=diamond, dir=both, headlabel="tacka "]
+47085272[ label="{Elipsa|+r1:INT\l+r2:INT\l}"]
 
-47996712 -> 47997656[arrowtail=diamond, dir=both, headlabel="oblik 0..*"]
-47996712[ label="{Element|+naziv_elementa:STRING\l}"]
+47079608 -> 47080552[arrowtail=diamond, dir=both, headlabel="oblik 0..*"]
+47079608[ label="{Element|+naziv_elementa:STRING\l}"]
 
-47997656[ label="{Oblik|}"]
-47997656 -> 47999544 [dir=back]
-47997656 -> 48000488 [dir=back]
-47997656 -> 48001432 [dir=back]
-47997656 -> 48002376 [dir=back]
+47080552[ label="{Oblik|}"]
+47080552 -> 47082440 [dir=back]
+47080552 -> 47083384 [dir=back]
+47080552 -> 47084328 [dir=back]
+47080552 -> 47085272 [dir=back]
 
-47999544 -> 47998600[arrowtail=diamond, dir=both, headlabel="tacka 0..*"]
-47999544[ label="{Linija|}"]
+47082440 -> 47081496[arrowtail=diamond, dir=both, headlabel="tacka 0..*"]
+47082440[ label="{Linija|}"]
 
-47995768 -> 47996712[arrowtail=diamond, dir=both, headlabel="element 0..*"]
-47995768[ label="{Nivo|+naziv_nivoa:STRING\l+Duzina:INT\l+Sirina:INT\l}"]
+47078664 -> 47079608[arrowtail=diamond, dir=both, headlabel="element 0..*"]
+47078664[ label="{Nivo|+naziv_nivoa:STRING\l+Duzina:INT\l+Sirina:INT\l}"]
 
-47994824 -> 47995768[arrowtail=diamond, dir=both, headlabel="nivo 0..*"]
-47994824[ label="{Kafic|+naziv_kafica:STRING\l}"]
+47077720 -> 47078664[arrowtail=diamond, dir=both, headlabel="nivo 0..*"]
+47077720[ label="{Kafic|+naziv_kafica:STRING\l}"]
 
-47989160[ label="{STRING|}"]
+47072056[ label="{STRING|}"]
 
-47993880[ label="{BASETYPE|}"]
-47993880 -> 47992936 [dir=back]
-47993880 -> 47990104 [dir=back]
-47993880 -> 47988216 [dir=back]
-47993880 -> 47989160 [dir=back]
+47076776[ label="{BASETYPE|}"]
+47076776 -> 47075832 [dir=back]
+47076776 -> 47073000 [dir=back]
+47076776 -> 47071112 [dir=back]
+47076776 -> 47072056 [dir=back]
 
-47991048[ label="{INT|}"]
+47073944[ label="{INT|}"]
 
-47991992[ label="{FLOAT|}"]
+47074888[ label="{FLOAT|}"]
 
-47992936[ label="{NUMBER|}"]
-47992936 -> 47991992 [dir=back]
-47992936 -> 47991048 [dir=back]
+47075832[ label="{NUMBER|}"]
+47075832 -> 47074888 [dir=back]
+47075832 -> 47073944 [dir=back]
 
-47990104[ label="{BOOL|}"]
+47073000[ label="{BOOL|}"]
 
-47988216[ label="{ID|}"]
+47071112[ label="{ID|}"]
 
 
 }
