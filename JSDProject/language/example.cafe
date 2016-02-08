@@ -5,7 +5,7 @@ Kafic begin
 		
 		Duzina=10
 		Sirina=23
-		
+		grey
 		Enterijer:
 			
 			Element 'okrugli_sto':

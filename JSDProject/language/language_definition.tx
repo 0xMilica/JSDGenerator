@@ -11,6 +11,7 @@ Nivo:
 	naziv_nivoa=STRING ':'
 	'Duzina=' Duzina=INT
 	'Sirina=' Sirina=INT
+	boja_pogloge=Boja
 	'Enterijer:'
 		element*=Element
 	"Kraj Nivoa"	
@@ -58,4 +59,8 @@ Elipsa:
 	tacka=Tacka
 		'poluprecnik1=' r1=INT
 		'poluprecnik2=' r2=INT
+;
+
+Boja:
+	"black" | "blue" | "grey" | "green" | "orange" | "pink" | "red" | "white" | "yellow"
 ;
