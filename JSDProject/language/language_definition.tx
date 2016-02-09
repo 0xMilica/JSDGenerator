@@ -25,7 +25,7 @@ Element:
 ;
 
 Oblik:
-	Linija | Trougao | Pravougaonik | Elipsa
+	Linija | Trougao | Pravougaonik | ZaobljeniPravougaonik | Elipsa
 ;
 
 Tacka:
@@ -52,6 +52,15 @@ Pravougaonik:
 	ugao = INT
 	tacka *= Tacka
 ;
+	
+ZaobljeniPravougaonik:
+	"ZaobljeniPravougaonik" ":"
+	boja = Boja
+	ugao = INT
+	tacka = Tacka
+	sirina_luka = FLOAT
+	visina_luka = FLOAT
+;	
 	
 Elipsa:
 	"Elipsa" ":"
