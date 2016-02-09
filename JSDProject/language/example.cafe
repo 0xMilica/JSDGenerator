@@ -1,41 +1,27 @@
 Kafic begin
 "Skochko"
 
-	Nivo 'Prizemlje':
-		
-		Duzina=10
-		Sirina=23
+	Nivo "prizemlje": 
+		10 
+		23 
 		grey
 		Enterijer:
-			
-			Element 'okrugli_sto':
+			Element "okrugli sto":
 				Oblici:
-					Elipsa: 
-						centar: x=50, y=30
-						poluprecnik1= 12
-						poluprecnik2= 13						
-			Kraj Elementa
-
-			Element 'stolica':
+					Elipsa: red 0 (20,30) 5 5
+			Element end;
+			Element "stolica":
 				Oblici:
-					Elipsa: 
-						centar: x=50, y=30
-						poluprecnik1=12
-						poluprecnik2=13
-					Pravougaonik:
-						x=43, y=25
-						x=53, y=35
-			Kraj Elementa
-			
-			Element 'sank':
-				Oblici:
-					Pravougaonik:
-						x=43, y=25
-						x=53, y=35
-			Kraj Elementa
-					
-	Kraj Nivoa
-
+					Elipsa: blue 0 (20,30) 5 5;
+					Pravougaonik: blue 90 (10,10) (20,20)
+			Element end
+	Nivo end;
 	
+	Nivo "prvi sprat": 
+		15 
+		25 
+		grey
+		Enterijer:
+	Nivo end
 
 Kafic end
