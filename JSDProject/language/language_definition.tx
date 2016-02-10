@@ -8,9 +8,9 @@ Kafic:
 Nivo:
 	"Nivo"
 	naziv = STRING ':'
-	duzina = INT
-	sirina = INT
-	boja = Boja
+	"duzina" "=" duzina = INT
+	"sirina" "=" sirina = INT
+	"boja_podloge" "=" boja_podloge = Boja
 	"Enterijer" ":"
 	element *= Element[";"]
 	"Nivo" "end"	
@@ -20,7 +20,7 @@ Element:
 	"Element"
 	naziv = STRING ':'
 	"Oblici" ":"
-	oblik *= Oblik[";"]
+	oblik *= Oblik
 	"Element" "end"
 ;
 
@@ -29,48 +29,53 @@ Oblik:
 ;
 
 Tacka:
-	"(" x=INT ',' y=INT ")"
+	"x" "=" x = INT ',' "y" "=" y = INT 
 ;
 	
 Linija:
 	"Linija" ":"
-	boja = Boja
-	ugao = INT
+	"boja" "=" boja = Boja
+	"ugao" "=" ugao = INT
 	tacka *= Tacka[";"]
 ;
 	
 Trougao:
 	'Trougao:'
-	boja = Boja
-	ugao = INT
+	"boja" "=" boja = Boja
+	"ugao" "=" ugao = INT
 	tacka *= Tacka[";"]
 ;
 
 Pravougaonik:
 	"Pravougaonik" ":"
-	boja = Boja
-	ugao = INT
+	"boja" "=" boja = Boja
+	"ugao" "=" ugao = INT
 	tacka *= Tacka
 ;
 	
 ZaobljeniPravougaonik:
 	"ZaobljeniPravougaonik" ":"
-	boja = Boja
-	ugao = INT
-	tacka = Tacka
-	sirina_luka = FLOAT
-	visina_luka = FLOAT
+	"boja" "=" boja = Boja
+	"ugao" "=" ugao = INT
+	"sirina_pravougaonika" "=" sirina_pravougaonika = INT
+	"visina_pravougaonika" "=" visina_pravougaonika = INT
+	"sirina_luka" "=" sirina_luka = INT
+	"visina_luka" "=" visina_luka = INT
 ;	
 	
 Elipsa:
 	"Elipsa" ":"
-	boja = Boja
-	ugao = INT
-	tacka = Tacka
-	r1 = INT
-	r2 = INT
+	"boja" "=" boja = Boja
+	"ugao" "=" ugao = INT
+	"centar" ":" tacka = Tacka
+	"poluprecnik1" "=" r1 = INT
+	"poluprecnik2" "=" r2 = INT
 ;
 
 Boja:
 	"black" | "blue" | "grey" | "green" | "orange" | "pink" | "red" | "white" | "yellow"
+;
+
+Comment:
+ 	/\/\/.*$/
 ;
