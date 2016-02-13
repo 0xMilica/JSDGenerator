@@ -8,24 +8,24 @@ Kafic begin
 		Enterijer:
 			Element "okrugli sto":
 				Oblici:
+					boja = red 
+					ugao = 0 
 					Elipsa:
-						boja = red 
-						ugao = 0 
 						centar : x = 20, y = 30 
 						poluprecnik1 = 3
 						poluprecnik2 = 3
 			Element end;
 			Element "stolica":
 				Oblici:
+					boja = blue 
+					ugao = 0 
 					Elipsa: 
-						boja = blue 
-						ugao = 0 
 						centar : x = 20, y = 30 
 						poluprecnik1 = 5
 						poluprecnik2 = 5
+					boja = blue 
+					ugao = 90 
 					Pravougaonik: 
-						boja = blue 
-						ugao = 90 
 						x = 10, y = 10 
 						x = 20, y = 20
 			Element end
@@ -38,9 +38,9 @@ Kafic begin
 		Enterijer:
 			Element "bilijarski sto":
 				Oblici:
+					boja = green 
+					ugao = 0 
 					ZaobljeniPravougaonik: 
-						boja = green 
-						ugao = 0 
 						sirina_pravougaonika = 30
 						visina_pravougaonika = 30
 						sirina_luka = 10 

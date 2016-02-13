@@ -25,6 +25,12 @@ Element:
 ;
 
 Oblik:
+	"boja" "=" boja = Boja
+	"ugao" "=" ugao = INT
+	tipOblika = TipOblika
+;
+
+TipOblika:
 	Linija | Trougao | Pravougaonik | ZaobljeniPravougaonik | Elipsa
 ;
 
@@ -34,29 +40,21 @@ Tacka:
 	
 Linija:
 	"Linija" ":"
-	"boja" "=" boja = Boja
-	"ugao" "=" ugao = INT
 	tacka *= Tacka[";"]
 ;
 	
 Trougao:
-	'Trougao:'
-	"boja" "=" boja = Boja
-	"ugao" "=" ugao = INT
+	"Trougao" ":"
 	tacka *= Tacka[";"]
 ;
 
 Pravougaonik:
 	"Pravougaonik" ":"
-	"boja" "=" boja = Boja
-	"ugao" "=" ugao = INT
 	tacka *= Tacka
 ;
 	
 ZaobljeniPravougaonik:
 	"ZaobljeniPravougaonik" ":"
-	"boja" "=" boja = Boja
-	"ugao" "=" ugao = INT
 	"sirina_pravougaonika" "=" sirina_pravougaonika = INT
 	"visina_pravougaonika" "=" visina_pravougaonika = INT
 	"sirina_luka" "=" sirina_luka = INT
@@ -65,8 +63,6 @@ ZaobljeniPravougaonik:
 	
 Elipsa:
 	"Elipsa" ":"
-	"boja" "=" boja = Boja
-	"ugao" "=" ugao = INT
 	"centar" ":" tacka = Tacka
 	"poluprecnik1" "=" r1 = INT
 	"poluprecnik2" "=" r2 = INT
