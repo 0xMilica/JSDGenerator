@@ -6,8 +6,9 @@ Kafic begin
 		sirina = 23 
 		boja_podloge = grey
 		Enterijer:
-			Element "okrugli sto":
+			Element "elementi 1":
 				Oblici:
+					naziv = sto1
 					boja = red 
 					ugao = 0 
 					Elipsa:
@@ -15,14 +16,16 @@ Kafic begin
 						poluprecnik1 = 3
 						poluprecnik2 = 3
 			Element end;
-			Element "stolica":
+			Element "elementi 2":
 				Oblici:
+					naziv = sto2
 					boja = blue 
 					ugao = 0 
 					Elipsa: 
 						centar : x = 20, y = 30 
 						poluprecnik1 = 5
 						poluprecnik2 = 5
+					naziv = sto3
 					boja = blue 
 					ugao = 90 
 					Pravougaonik: 
@@ -36,8 +39,9 @@ Kafic begin
 		sirina = 25 
 		boja_podloge = grey
 		Enterijer:
-			Element "bilijarski sto":
+			Element "elementi 3":
 				Oblici:
+				    naziv = sto4
 					boja = green 
 					ugao = 0 
 					ZaobljeniPravougaonik: 
