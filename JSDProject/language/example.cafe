@@ -1,7 +1,7 @@
 Kafic begin
 "Skochko"
 
-	Nivo "prizemlje": 
+	Nivo prizemlje: 
 		duzina = 10 
 		sirina = 23 
 		boja_podloge = grey
@@ -25,7 +25,7 @@ Kafic begin
 						centar : x = 20, y = 30 
 						poluprecnik1 = 5
 						poluprecnik2 = 5
-					naziv = sto3
+					naziv = sto2
 					boja = blue 
 					ugao = 90 
 					Pravougaonik: 
@@ -34,7 +34,7 @@ Kafic begin
 			Element end
 	Nivo end;
 	
-	Nivo "prvi sprat": 
+	Nivo prvi_sprat: 
 		duzina = 15 
 		sirina = 25 
 		boja_podloge = grey
@@ -52,7 +52,7 @@ Kafic begin
 			Element end
 	Nivo end;
 	
-	Nivo "drugi sprat":
+	Nivo drugi_sprat:
 		duzina = 15 
 		sirina = 25 
 		boja_podloge = grey

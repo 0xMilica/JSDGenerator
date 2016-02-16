@@ -7,7 +7,7 @@ Kafic:
 
 Nivo:
 	"Nivo"
-	naziv = STRING ':'
+	naziv = ID ":"
 	"duzina" "=" duzina = INT
 	"sirina" "=" sirina = INT
 	"boja_podloge" "=" boja_podloge = Boja
@@ -18,7 +18,7 @@ Nivo:
 	
 Element:
 	"Element"
-	naziv = STRING ':'
+	naziv = STRING ":"
 	"Oblici" ":"
 	oblik *= Oblik
 	"Element" "end"
