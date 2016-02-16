@@ -24,7 +24,7 @@ class Interpreter(object):
                 for oblik in element.oblik:
                     
                     print ("\t"+ oblik.__class__.__name__)
-                    temp_oblik = Oblik('testOblik', 'crvena', '0', oblik.__class__.__name__)
+                    temp_oblik = Oblik('testOblik', 'crvena', '0', oblik.tipOblika.__class__.__name__)
                 
                     temp_element.oblici.append(temp_oblik)
                     

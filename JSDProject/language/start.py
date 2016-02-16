@@ -36,5 +36,6 @@ if __name__ == "__main__":
      
     interpreter = Interpreter(model)
     interpreter.interpret()
-    
-    generator.generate("painter_template.java", "CafePainter.java", {"canvas" : model, "imports" : javaPackageAndImports() } )
+    konkretanKafic = interpreter.kafic
+    generator.generate("painter_template.java", "CafePainter.java", 
+                       {"canvas" : model, "imports" : javaPackageAndImports(), "kafic" : konkretanKafic } )

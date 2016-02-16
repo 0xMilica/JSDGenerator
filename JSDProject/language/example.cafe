@@ -6,7 +6,7 @@ Kafic begin
 		sirina = 23 
 		boja_podloge = grey
 		Enterijer:
-			Element "elementi 1":
+			Element "okrugli_sto":
 				Oblici:
 					naziv = sto1
 					boja = red 
@@ -16,7 +16,7 @@ Kafic begin
 						poluprecnik1 = 3
 						poluprecnik2 = 3
 			Element end;
-			Element "elementi 2":
+			Element "stolica":
 				Oblici:
 					naziv = sto2
 					boja = blue 
@@ -39,7 +39,7 @@ Kafic begin
 		sirina = 25 
 		boja_podloge = grey
 		Enterijer:
-			Element "elementi 3":
+			Element "sank":
 				Oblici:
 				    naziv = sto4
 					boja = green 

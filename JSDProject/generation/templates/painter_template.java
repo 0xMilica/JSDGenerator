@@ -5,22 +5,33 @@
 {% endmacro %}
 {{packageAndImports(imports)}}
 
-public class CafePainter {
+public class {{kafic.naziv}} {
 
 	public static void main(String[] args) {
+		
 		// TODO Auto-generated method stub
-
 		MainFrame mejnfrejm = new MainFrame();
 		mejnfrejm.setVisible(true);
-
+		
 		// TODO: Deo za jezik
-		ArrayList<Oblik> oblici = new ArrayList<Oblik>();
 		
-		Element element = new Element(oblici);
-		
+		{% for canvas in kafic.nivoi %}
 		Canvas canvas = mejnfrejm.getPanel();
+				{% for element in canvas.elementi %}
+		Element {{element.naziv}} = null;
+		ArrayList<Oblik> oblici = new ArrayList<Oblik>();
+					{% for oblik in element.oblici %}
+		{{oblik.ime_klase}} {{oblik.naziv}} = new {{oblik.ime_klase}}();
+		oblici.add({{oblik.naziv}});
+					
+					{% endfor %}
+		{{element.naziv}} = new Element(oblici);
+		canvas.addElementToCanvas({{element.naziv}});		
+			{% endfor %}
+		{% endfor %}
 		
-		canvas.addElementToCanvas(element);
+		
+		
 		
 	//	Linija linija2 = new Linija(null, null, new Point2D.Double(12,12), new Point2D.Double(33,55));
 	//	oblici.add(linija2);
@@ -35,6 +46,7 @@ public class CafePainter {
 		oblici.add(elipsa);
 		
 		Trougao trougao = new Trougao(null, null, new Point2D.Double(10,15), new Point2D.Double(20, 70), new Point2D.Double(30,30));
+		
 		oblici.add(trougao);
 	}
 
