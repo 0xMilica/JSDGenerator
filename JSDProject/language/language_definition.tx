@@ -25,10 +25,9 @@ Element:
 ;
 
 Oblik:
-	"naziv" "=" naziv = ID
+	tipOblika = TipOblika
 	"boja" "=" boja = Boja
 	"ugao" "=" ugao = INT
-	tipOblika = TipOblika
 ;
 
 TipOblika:
