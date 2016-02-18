@@ -22,33 +22,33 @@ public class Skochko {
 		
 		// TODO: Deo za jezik
 		
-		Canvas canvas = mejnfrejm.getPanel();
-		Element okrugli_sto = null;
-		ArrayList<Oblik> oblici = new ArrayList<Oblik>();
-		Elipsa testOblik = new Elipsa();
-		oblici.add(testOblik);
+		Canvas prizemlje = mejnfrejm.getPanel();
+		Element okrugli_sto1 = null;
+		ArrayList<Oblik> obliciokrugli_sto1 = new ArrayList<Oblik>();
 					
-		okrugli_sto = new Element(oblici);
-		canvas.addElementToCanvas(okrugli_sto);		
-		Element stolica = null;
-		ArrayList<Oblik> oblici = new ArrayList<Oblik>();
-		Elipsa testOblik = new Elipsa();
-		oblici.add(testOblik);
+		Elipsa elipsa1 = new Elipsa();
+		obliciokrugli_sto1.add(elipsa1);	
+		okrugli_sto1 = new Element(obliciokrugli_sto1);
+		prizemlje.addElementToCanvas(okrugli_sto1);		
+		Element stolica2 = null;
+		ArrayList<Oblik> oblicistolica2 = new ArrayList<Oblik>();
 					
-		Pravougaonik testOblik = new Pravougaonik();
-		oblici.add(testOblik);
+		Elipsa elipsa2 = new Elipsa();
+		oblicistolica2.add(elipsa2);	
 					
-		stolica = new Element(oblici);
-		canvas.addElementToCanvas(stolica);		
-		Canvas canvas = mejnfrejm.getPanel();
-		Element sank = null;
-		ArrayList<Oblik> oblici = new ArrayList<Oblik>();
-		ZaobljeniPravougaonik testOblik = new ZaobljeniPravougaonik();
-		oblici.add(testOblik);
+		Pravougaonik pravougaonik3 = new Pravougaonik();
+		oblicistolica2.add(pravougaonik3);	
+		stolica2 = new Element(oblicistolica2);
+		prizemlje.addElementToCanvas(stolica2);		
+		Canvas prvi_sprat = mejnfrejm.getPanel();
+		Element sank3 = null;
+		ArrayList<Oblik> oblicisank3 = new ArrayList<Oblik>();
 					
-		sank = new Element(oblici);
-		canvas.addElementToCanvas(sank);		
-		Canvas canvas = mejnfrejm.getPanel();
+		ZaobljeniPravougaonik zaobljeniPravougaonik4 = new ZaobljeniPravougaonik();
+		oblicisank3.add(zaobljeniPravougaonik4);	
+		sank3 = new Element(oblicisank3);
+		prvi_sprat.addElementToCanvas(sank3);		
+		Canvas drugi_sprat = mejnfrejm.getPanel();
 		
 		
 		
@@ -58,16 +58,16 @@ public class Skochko {
 		
 		//test pravougaonika
 		
-		Pravougaonik pravougaonik = new Pravougaonik(null, Oblik.dashed, new Point2D.Double(55, 55), new Point2D.Double(155, 200));
-		oblici.add(pravougaonik);
-		
-		Elipsa elipsa = new Elipsa (Color.BLUE, null, new Point2D.Double(70,70), 100, 100);
-		
-		oblici.add(elipsa);
-		
-		Trougao trougao = new Trougao(null, null, new Point2D.Double(10,15), new Point2D.Double(20, 70), new Point2D.Double(30,30));
-		
-		oblici.add(trougao);
+//		Pravougaonik pravougaonik = new Pravougaonik(null, Oblik.dashed, new Point2D.Double(55, 55), new Point2D.Double(155, 200));
+//		oblici.add(pravougaonik);
+//		
+//		Elipsa elipsa = new Elipsa (Color.BLUE, null, new Point2D.Double(70,70), 100, 100);
+//		
+//		oblici.add(elipsa);
+//		
+//		Trougao trougao = new Trougao(null, null, new Point2D.Double(10,15), new Point2D.Double(20, 70), new Point2D.Double(30,30));
+//		
+//		oblici.add(trougao);
 	}
 
 }

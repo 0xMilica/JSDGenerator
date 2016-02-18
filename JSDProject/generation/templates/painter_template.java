@@ -16,17 +16,16 @@ public class {{kafic.naziv}} {
 		// TODO: Deo za jezik
 		
 		{% for canvas in kafic.nivoi %}
-		Canvas canvas = mejnfrejm.getPanel();
+		Canvas {{canvas.naziv}} = mejnfrejm.getPanel();
 				{% for element in canvas.elementi %}
 		Element {{element.naziv}} = null;
-		ArrayList<Oblik> oblici = new ArrayList<Oblik>();
-					{% for oblik in element.oblici %}
+		ArrayList<Oblik> oblici{{element.naziv}} = new ArrayList<Oblik>();
+					{% for oblik in element.oblici %}					
 		{{oblik.ime_klase}} {{oblik.naziv}} = new {{oblik.ime_klase}}();
-		oblici.add({{oblik.naziv}});
-					
+		oblici{{element.naziv}}.add({{oblik.naziv}});	
 					{% endfor %}
-		{{element.naziv}} = new Element(oblici);
-		canvas.addElementToCanvas({{element.naziv}});		
+		{{element.naziv}} = new Element(oblici{{element.naziv}});
+		{{canvas.naziv}}.addElementToCanvas({{element.naziv}});		
 			{% endfor %}
 		{% endfor %}
 		
@@ -38,16 +37,16 @@ public class {{kafic.naziv}} {
 		
 		//test pravougaonika
 		
-		Pravougaonik pravougaonik = new Pravougaonik(null, Oblik.dashed, new Point2D.Double(55, 55), new Point2D.Double(155, 200));
-		oblici.add(pravougaonik);
-		
-		Elipsa elipsa = new Elipsa (Color.BLUE, null, new Point2D.Double(70,70), 100, 100);
-		
-		oblici.add(elipsa);
-		
-		Trougao trougao = new Trougao(null, null, new Point2D.Double(10,15), new Point2D.Double(20, 70), new Point2D.Double(30,30));
-		
-		oblici.add(trougao);
+//		Pravougaonik pravougaonik = new Pravougaonik(null, Oblik.dashed, new Point2D.Double(55, 55), new Point2D.Double(155, 200));
+//		oblici.add(pravougaonik);
+//		
+//		Elipsa elipsa = new Elipsa (Color.BLUE, null, new Point2D.Double(70,70), 100, 100);
+//		
+//		oblici.add(elipsa);
+//		
+//		Trougao trougao = new Trougao(null, null, new Point2D.Double(10,15), new Point2D.Double(20, 70), new Point2D.Double(30,30));
+//		
+//		oblici.add(trougao);
 	}
 
 }
