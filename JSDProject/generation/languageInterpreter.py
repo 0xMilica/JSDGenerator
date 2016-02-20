@@ -38,16 +38,16 @@ class Interpreter(object):
                     if clsname == 'Elipsa':
                         atributi = {'Color' : 'Color.'+oblik.boja.upper(),
                                     'Stroke' : 'null',
-                                    'ugao' : 'double {0}'.format(oblik.ugao),
+                                    'ugao' : oblik.ugao,
                                     'centar' : 'new Point2D.Double({0},{1})'.format(oblik.tipOblika.tacka.x, oblik.tipOblika.tacka.y),
-                                    'visina' : 'double {0}'.format(oblik.tipOblika.r1), 
-                                    'sirina' : 'double {0}'.format(oblik.tipOblika.r2)
+                                    'visina' : oblik.tipOblika.r1, 
+                                    'sirina' : oblik.tipOblika.r2
                                     }
         
                     elif clsname == 'Pravougaonik':
                         atributi = {'Color':'Color.'+oblik.boja.upper(),
                                     'Stroke' : 'null',
-                                    'ugao' : 'double {0}'.format(oblik.ugao),
+                                    'ugao' : oblik.ugao,
                                     'pocetnaTacka' : 'new Point2D.Double({0},{1})'.format(oblik.tipOblika.tacka[0].x, oblik.tipOblika.tacka[0].y),
                                     'krajnjaTacka' : 'new Point2D.Double({0},{1})'.format(oblik.tipOblika.tacka[1].x, oblik.tipOblika.tacka[1].y)
                                     }
@@ -55,14 +55,23 @@ class Interpreter(object):
                     elif clsname == 'Trougao':
                         atributi = {'Color':'Color.'+oblik.boja.upper(),
                                     'Stroke' : 'null',
-                                    'ugao' : 'double {0}'.format(oblik.ugao),
+                                    'ugao' : oblik.ugao,
                                     'a' : 'new Point2D.Double({0},{1})'.format(oblik.tipOblika.tacka[0].x, oblik.tipOblika.tacka[0].y),
                                     'b' : 'new Point2D.Double({0},{1})'.format(oblik.tipOblika.tacka[1].x, oblik.tipOblika.tacka[1].y),
                                     'c' : 'new Point2D.Double({0},{1})'.format(oblik.tipOblika.tacka[2].x, oblik.tipOblika.tacka[2].y)
                                     }
                         print atributi
                     elif clsname == 'ZaobljeniPravougaonik':
-                        atributi = {'asa':'asas'}
+                        atributi = {'Color':'Color.'+oblik.boja.upper(),
+                                    'Stroke' : 'null',
+                                    'ugao' : oblik.ugao,
+#                                     TODO ispada iz sablona po kom su odradjeni ostali graficki elementi
+#                                     'pozicija' : 'new Point2D.Double({0},{1})'.format(oblik.tipOblika.tacka.x, oblik.tipOblika.tacka.y),
+                                    'sirinaPravougaonika' : oblik.tipOblika.sirina_pravougaonika,
+                                    'visinaPravougaonika' : oblik.tipOblika.visina_pravougaonika,
+                                    'sirinaLuka' : oblik.tipOblika.sirina_luka,
+                                    'visinaLuka' : oblik.tipOblika.visina_luka
+                                    }
                     
                     temp_oblik = Oblik(self.first_lower(clsname)+str(brojacOblika), oblik.boja, oblik.ugao, clsname, atributi)
                 
