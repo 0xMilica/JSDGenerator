@@ -45,10 +45,22 @@ class Interpreter(object):
                                     }
         
                     elif clsname == 'Pravougaonik':
-                        atributi = {'aaaa':'vrednost'}
-                    
+                        atributi = {'Color':'Color.'+oblik.boja.upper(),
+                                    'Stroke' : 'null',
+                                    'ugao' : 'double {0}'.format(oblik.ugao),
+                                    'pocetnaTacka' : 'new Point2D.Double({0},{1})'.format(oblik.tipOblika.tacka[0].x, oblik.tipOblika.tacka[0].y),
+                                    'krajnjaTacka' : 'new Point2D.Double({0},{1})'.format(oblik.tipOblika.tacka[1].x, oblik.tipOblika.tacka[1].y)
+                                    }
+                        print atributi
                     elif clsname == 'Trougao':
-                        atributi = {'aaasddd':'aasss'}
+                        atributi = {'Color':'Color.'+oblik.boja.upper(),
+                                    'Stroke' : 'null',
+                                    'ugao' : 'double {0}'.format(oblik.ugao),
+                                    'a' : 'new Point2D.Double({0},{1})'.format(oblik.tipOblika.tacka[0].x, oblik.tipOblika.tacka[0].y),
+                                    'b' : 'new Point2D.Double({0},{1})'.format(oblik.tipOblika.tacka[1].x, oblik.tipOblika.tacka[1].y),
+                                    'c' : 'new Point2D.Double({0},{1})'.format(oblik.tipOblika.tacka[2].x, oblik.tipOblika.tacka[2].y)
+                                    }
+                        print atributi
                     elif clsname == 'ZaobljeniPravougaonik':
                         atributi = {'asa':'asas'}
                     

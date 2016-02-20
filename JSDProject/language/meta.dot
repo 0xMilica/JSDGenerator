@@ -10,64 +10,64 @@
     edge[dir=black,arrowtail=empty]
 
 
-46137392[ label="{Comment|\/\/.*$}"]
+45875248[ label="{Comment|\/\/.*$}"]
 
-46088712[ label="{Tacka|+x:INT\l+y:INT\l}"]
+45826568[ label="{Tacka|+x:INT\l+y:INT\l}"]
 
-46091544[ label="{Boja|black\|blue\|grey\|green\|orange\|pink\|red\|white\|yellow}"]
+45829400[ label="{Boja|black\|blue\|grey\|green\|orange\|pink\|red\|white\|yellow}"]
 
-46089656 -> 46088712[arrowtail=diamond, dir=both, headlabel="tacka 0..*"]
-46089656[ label="{Trougao|}"]
+45827512 -> 45826568[arrowtail=diamond, dir=both, headlabel="tacka 0..*"]
+45827512[ label="{Trougao|}"]
 
-46090128 -> 46088712[arrowtail=diamond, dir=both, headlabel="tacka 0..*"]
-46090128[ label="{Pravougaonik|}"]
+45827984 -> 45826568[arrowtail=diamond, dir=both, headlabel="tacka 0..*"]
+45827984[ label="{Pravougaonik|}"]
 
-46091072 -> 46088712[arrowtail=diamond, dir=both, headlabel="tacka "]
-46091072[ label="{Elipsa|+r1:INT\l+r2:INT\l}"]
+45828928 -> 45826568[arrowtail=diamond, dir=both, headlabel="tacka "]
+45828928[ label="{Elipsa|+r1:INT\l+r2:INT\l}"]
 
-44858176 -> 44858648[arrowtail=diamond, dir=both, headlabel="oblik 0..*"]
-44858176[ label="{Element|+naziv:STRING\l}"]
+44583744 -> 44584216[arrowtail=diamond, dir=both, headlabel="oblik 0..*"]
+44583744[ label="{Element|+naziv:STRING\l}"]
 
-44858648 -> 46088240[arrowtail=diamond, dir=both, headlabel="tipOblika "]
-44858648[ label="{Oblik|+boja:Boja\l+ugao:INT\l}"]
+44584216 -> 45826096[arrowtail=diamond, dir=both, headlabel="tipOblika "]
+44584216[ label="{Oblik|+boja:Boja\l+ugao:INT\l}"]
 
-46090600[ label="{ZaobljeniPravougaonik|+sirina_pravougaonika:INT\l+visina_pravougaonika:INT\l+sirina_luka:INT\l+visina_luka:INT\l}"]
+45828456[ label="{ZaobljeniPravougaonik|+sirina_pravougaonika:INT\l+visina_pravougaonika:INT\l+sirina_luka:INT\l+visina_luka:INT\l}"]
 
-46089184 -> 46088712[arrowtail=diamond, dir=both, headlabel="tacka 0..*"]
-46089184[ label="{Linija|}"]
+45827040 -> 45826568[arrowtail=diamond, dir=both, headlabel="tacka 0..*"]
+45827040[ label="{Linija|}"]
 
-44857704 -> 44858176[arrowtail=diamond, dir=both, headlabel="element 0..*"]
-44857704[ label="{Nivo|+naziv:ID\l+duzina:INT\l+sirina:INT\l+boja_podloge:Boja\l}"]
+44583272 -> 44583744[arrowtail=diamond, dir=both, headlabel="element 0..*"]
+44583272[ label="{Nivo|+naziv:ID\l+duzina:INT\l+sirina:INT\l+boja_podloge:Boja\l}"]
 
-44857232 -> 44857704[arrowtail=diamond, dir=both, headlabel="nivo 1..*"]
-44857232[ label="{Kafic|+naziv:STRING\l}"]
+44582800 -> 44583272[arrowtail=diamond, dir=both, headlabel="nivo 1..*"]
+44582800[ label="{Kafic|+naziv:STRING\l}"]
 
-46088240[ label="{TipOblika|}"]
-46088240 -> 46089184 [dir=back]
-46088240 -> 46089656 [dir=back]
-46088240 -> 46090128 [dir=back]
-46088240 -> 46090600 [dir=back]
-46088240 -> 46091072 [dir=back]
+45826096[ label="{TipOblika|}"]
+45826096 -> 45827040 [dir=back]
+45826096 -> 45827512 [dir=back]
+45826096 -> 45827984 [dir=back]
+45826096 -> 45828456 [dir=back]
+45826096 -> 45828928 [dir=back]
 
-44817216[ label="{STRING|}"]
+44555072[ label="{STRING|}"]
 
-44856760[ label="{BASETYPE|}"]
-44856760 -> 44856288 [dir=back]
-44856760 -> 44817688 [dir=back]
-44856760 -> 44816744 [dir=back]
-44856760 -> 44817216 [dir=back]
+44582328[ label="{BASETYPE|}"]
+44582328 -> 44581856 [dir=back]
+44582328 -> 44555544 [dir=back]
+44582328 -> 44554600 [dir=back]
+44582328 -> 44555072 [dir=back]
 
-44855344[ label="{INT|}"]
+44580912[ label="{INT|}"]
 
-44855816[ label="{FLOAT|}"]
+44581384[ label="{FLOAT|}"]
 
-44856288[ label="{NUMBER|}"]
-44856288 -> 44855816 [dir=back]
-44856288 -> 44855344 [dir=back]
+44581856[ label="{NUMBER|}"]
+44581856 -> 44581384 [dir=back]
+44581856 -> 44580912 [dir=back]
 
-44817688[ label="{BOOL|}"]
+44555544[ label="{BOOL|}"]
 
-44816744[ label="{ID|}"]
+44554600[ label="{ID|}"]
 
 
 }
