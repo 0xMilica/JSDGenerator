@@ -1,3 +1,4 @@
+
 package test;
 
 import java.awt.Color;
@@ -26,17 +27,20 @@ public class Skochko {
 		Element okrugli_sto1 = null;
 		ArrayList<Oblik> obliciokrugli_sto1 = new ArrayList<Oblik>();
 					
-		Elipsa elipsa1 = new Elipsa();
+		Elipsa elipsa1 = new Elipsa(Color.RED,null,0,new Point2D.Double(20,30),3,3);
+
 		obliciokrugli_sto1.add(elipsa1);	
 		okrugli_sto1 = new Element(obliciokrugli_sto1);
 		prizemlje.addElementToCanvas(okrugli_sto1);		
 		Element stolica2 = null;
 		ArrayList<Oblik> oblicistolica2 = new ArrayList<Oblik>();
 					
-		Elipsa elipsa2 = new Elipsa();
+		Elipsa elipsa2 = new Elipsa(Color.BLUE,null,0,new Point2D.Double(20,30),5,5);
+
 		oblicistolica2.add(elipsa2);	
 					
-		Pravougaonik pravougaonik3 = new Pravougaonik();
+		Pravougaonik pravougaonik3 = new Pravougaonik(Color.BLUE,null,0,new Point2D.Double(10,10),new Point2D.Double(20,20));
+
 		oblicistolica2.add(pravougaonik3);	
 		stolica2 = new Element(oblicistolica2);
 		prizemlje.addElementToCanvas(stolica2);		
@@ -44,7 +48,8 @@ public class Skochko {
 		Element sank3 = null;
 		ArrayList<Oblik> oblicisank3 = new ArrayList<Oblik>();
 					
-		ZaobljeniPravougaonik zaobljeniPravougaonik4 = new ZaobljeniPravougaonik();
+		ZaobljeniPravougaonik zaobljeniPravougaonik4 = new ZaobljeniPravougaonik(Color.GREEN,null,0,30,30,10,10);
+
 		oblicisank3.add(zaobljeniPravougaonik4);	
 		sank3 = new Element(oblicisank3);
 		prvi_sprat.addElementToCanvas(sank3);		

@@ -1,3 +1,13 @@
+{% macro attributes(dict)%}
+	{% for key, value in dict.items() %}
+		{% if loop.last -%}
+{{ value }});
+		{% else %}
+{{ value }}, 
+		{%- endif %}
+	{% endfor %}
+{% endmacro %}
+
 {% macro packageAndImports(imports) %}
 	{% for packageAndImport in imports %}
 {{packageAndImport}}
@@ -21,7 +31,7 @@ public class {{kafic.naziv}} {
 		Element {{element.naziv}} = null;
 		ArrayList<Oblik> oblici{{element.naziv}} = new ArrayList<Oblik>();
 					{% for oblik in element.oblici %}					
-		{{oblik.ime_klase}} {{oblik.naziv}} = new {{oblik.ime_klase}}();
+		{{oblik.ime_klase}} {{oblik.naziv}} = new {{oblik.ime_klase}}({{attributes(oblik.atributi)}}
 		oblici{{element.naziv}}.add({{oblik.naziv}});	
 					{% endfor %}
 		{{element.naziv}} = new Element(oblici{{element.naziv}});
