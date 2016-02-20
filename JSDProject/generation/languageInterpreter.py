@@ -34,7 +34,25 @@ class Interpreter(object):
                     print ("\t"+ oblik.__class__.__name__)
                     clsname = oblik.tipOblika.__class__.__name__
                     brojacOblika += 1
-                    temp_oblik = Oblik(self.first_lower(clsname)+str(brojacOblika), oblik.boja, oblik.ugao, clsname)
+                    
+                    if clsname == 'Elipsa':
+                        atributi = {'Color' : 'Color.'+oblik.boja.upper(),
+                                    'Stroke' : 'null',
+                                    'ugao' : 'double {0}'.format(oblik.ugao),
+                                    'centar' : 'new Point2D.Double({0},{1})'.format(oblik.tipOblika.tacka.x, oblik.tipOblika.tacka.y),
+                                    'visina' : 'double {0}'.format(oblik.tipOblika.r1), 
+                                    'sirina' : 'double {0}'.format(oblik.tipOblika.r2)
+                                    }
+        
+                    elif clsname == 'Pravougaonik':
+                        atributi = {'aaaa':'vrednost'}
+                    
+                    elif clsname == 'Trougao':
+                        atributi = {'aaasddd':'aasss'}
+                    elif clsname == 'ZaobljeniPravougaonik':
+                        atributi = {'asa':'asas'}
+                    
+                    temp_oblik = Oblik(self.first_lower(clsname)+str(brojacOblika), oblik.boja, oblik.ugao, clsname, atributi)
                 
                     temp_element.oblici.append(temp_oblik)
                     
@@ -66,10 +84,11 @@ class Element(object):
         
 class Oblik(object):
     
-    def __init__(self, naziv, boja, ugao, ime_klase):
+    def __init__(self, naziv, boja, ugao, ime_klase, atributi):
         self.naziv = naziv
         self.boja = boja
         self.ugao = ugao
         self.ime_klase= ime_klase
+        self.atributi = atributi
         
             
