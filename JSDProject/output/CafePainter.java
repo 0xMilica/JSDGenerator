@@ -30,7 +30,7 @@ public class Skochko {
 		Elipsa elipsa1 = new Elipsa(Color.RED,null,0,new Point2D.Double(20,30),3,3);
 
 		obliciokrugli_sto1.add(elipsa1);	
-		okrugli_sto1 = new Element(obliciokrugli_sto1);
+		okrugli_sto1 = new Element("okrugli_sto1", obliciokrugli_sto1);
 		prizemlje.addElementToCanvas(okrugli_sto1);		
 		Element stolica2 = null;
 		ArrayList<Oblik> oblicistolica2 = new ArrayList<Oblik>();
@@ -42,7 +42,7 @@ public class Skochko {
 		Pravougaonik pravougaonik3 = new Pravougaonik(Color.BLUE,null,0,new Point2D.Double(10,10),new Point2D.Double(20,20));
 
 		oblicistolica2.add(pravougaonik3);	
-		stolica2 = new Element(oblicistolica2);
+		stolica2 = new Element("stolica2", oblicistolica2);
 		prizemlje.addElementToCanvas(stolica2);		
 		Canvas prvi_sprat = mejnfrejm.getPanel();
 		Element sank3 = null;
@@ -51,7 +51,7 @@ public class Skochko {
 		ZaobljeniPravougaonik zaobljeniPravougaonik4 = new ZaobljeniPravougaonik(Color.GREEN,null,0,30,30,10,10);
 
 		oblicisank3.add(zaobljeniPravougaonik4);	
-		sank3 = new Element(oblicisank3);
+		sank3 = new Element("sank3", oblicisank3);
 		prvi_sprat.addElementToCanvas(sank3);		
 		Canvas drugi_sprat = mejnfrejm.getPanel();
 		

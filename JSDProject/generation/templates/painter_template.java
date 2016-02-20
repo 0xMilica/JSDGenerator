@@ -34,7 +34,7 @@ public class {{kafic.naziv}} {
 		{{oblik.ime_klase}} {{oblik.naziv}} = new {{oblik.ime_klase}}({{attributes(oblik.atributi)}}
 		oblici{{element.naziv}}.add({{oblik.naziv}});	
 					{% endfor %}
-		{{element.naziv}} = new Element(oblici{{element.naziv}});
+		{{element.naziv}} = new Element("{{element.naziv}}", oblici{{element.naziv}});
 		{{canvas.naziv}}.addElementToCanvas({{element.naziv}});		
 			{% endfor %}
 		{% endfor %}
