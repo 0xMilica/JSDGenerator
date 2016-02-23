@@ -27,15 +27,10 @@ if __name__ == "__main__":
     metamodel = metamodel_from_file("language.tx")
     metamodel_export(metamodel, "meta.dot")
     graph = pydot.graph_from_dot_file("meta.dot")
-    graph.write_png("model.png")
+    graph.write_png("meta.png")
     
     model = metamodel.model_from_file("model.cafe")
     model_export(model, "model.dot")
     graph = pydot.graph_from_dot_file("model.dot")
     graph.write_png("model.png")
      
-    interpreter = Interpreter(model)
-    interpreter.interpret()
-    konkretanKafic = interpreter.kafic
-    generator.generate("main_test.java", "MainTest.java", 
-                       {"canvas" : model, "imports" : javaPackageAndImports(), "kafic" : konkretanKafic } )
