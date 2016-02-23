@@ -1,0 +1,119 @@
+Kafic:
+	"Kafic" "begin"
+	naziv = STRING
+	nivo += Nivo[";"]
+	"Kafic" "end"
+;
+
+Nivo:
+	"Nivo"
+	naziv = ID ":"
+	"duzina" "=" duzina = INT
+	"sirina" "=" sirina = INT
+	"boja_podloge" "=" boja_podloge = Boja
+	"raspored" "=" raspored = Raspored
+	"Enterijer" ":"
+	element *= Element[";"]
+	"Nivo" "end"	
+;
+	
+Element:
+	"Element"
+	naziv = STRING ":"
+	"Oblici" ":"
+	oblik *= Oblik
+	"Element" "end"
+;
+
+Oblik:
+	tipOblika = TipOblika
+	"boja" "=" boja = Boja
+	"ugao" "=" ugao = INT
+	"pozicija" "=" pozicija = Pozicija
+;
+
+TipOblika:
+	Linija | Trougao | Pravougaonik | ZaobljeniPravougaonik | Elipsa
+;
+
+Tacka:
+	"x" "=" x = INT ',' "y" "=" y = INT 
+;
+	
+Linija:
+	"Linija" ":"
+	"a" "=" a = INT
+;
+	
+Trougao:
+	"Trougao" ":"
+	"a" "=" a = INT
+	"b" "=" b = INT
+	"c" "=" c = INT
+;
+
+Pravougaonik:
+	"Pravougaonik" ":"
+	"a" "=" a = INT
+	"b" "=" b = INT
+;
+	
+ZaobljeniPravougaonik:
+	"ZaobljeniPravougaonik" ":"
+	"a" "=" a = INT
+	"b" "=" b = INT
+	"sirina_luka" "=" sirina_luka = INT
+	"visina_luka" "=" visina_luka = INT
+;	
+	
+Elipsa:
+	"Elipsa" ":"
+	"precnik1" "=" precnik1 = INT
+	"precnik2" "=" precnik2 = INT
+;
+
+Boja:
+	"black" | "blue" | "grey" | "green" | "orange" | "pink" | "red" | "white" | "yellow"
+;
+
+Raspored:
+	Grid | Koordinate | StraneSveta
+;
+
+Grid:
+	"Grid" ":"
+	"broj_kolona" "=" broj_kolona = INT
+	"broj_redova" "=" broj_redova = INT
+	"Pozicije" ":" pozicije += GridPozicija[";"]
+;
+
+Koordinate:
+	"Koordinate" ":"
+	"Pozicije" ":" pozicije += KoordinatePozicija[";"]
+;
+
+StraneSveta:
+	"StraneSveta" ":"
+	"Pozicije" ":" pozicije += Pozicija[";"]
+;
+
+Pozicija:
+	GridPozicija | KoordinatePozicija | StraneSvetaPozicija
+;
+
+GridPozicija:
+	"broj_kolone" "=" broj_kolone = INT ","
+	"broj_reda" "=" broj_reda = INT
+;
+
+KoordinatePozicija:
+	pozicija += Tacka
+;
+
+StraneSvetaPozicija:
+	"sever" | "jug" | "istok" | "zapad" | "severoistok" | "severozapad" | "jugoistok" | "jugozapad" | "centar" 
+;
+
+Comment:
+ 	/\/\/.*$/
+;

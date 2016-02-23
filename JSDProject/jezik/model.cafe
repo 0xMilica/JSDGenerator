@@ -1,0 +1,68 @@
+Kafic begin
+"Skochko"
+
+	Nivo prizemlje: 
+		duzina = 10 
+		sirina = 23 
+		boja_podloge = grey
+		raspored = Grid:
+				broj_kolona = 2 
+				broj_redova = 2
+				Pozicije:
+					broj_kolone = 0, broj_reda = 0;
+					broj_kolone = 1, broj_reda = 0
+		Enterijer:
+			Element "sto1":
+				Oblici:
+					Elipsa:
+						precnik1 = 25
+						precnik2 = 25
+						boja = red 
+						ugao = 0 
+						pozicija = broj_kolone = 0, broj_reda = 0
+			Element end;
+			Element "sto2":
+				Oblici:
+					Elipsa: 
+						precnik1 = 25
+						precnik2 = 25
+						boja = blue 
+						ugao = 0 
+						pozicija = broj_kolone = 0, broj_reda = 1
+			Element end
+	Nivo end;
+	
+	Nivo prvi_sprat: 
+		duzina = 15 
+		sirina = 25 
+		boja_podloge = grey
+		raspored = StraneSveta:
+				Pozicije:
+					sever
+		Enterijer:
+			Element "sto3":
+				Oblici:
+					ZaobljeniPravougaonik: 
+						a = 30
+						b = 30
+						sirina_luka = 10 
+						visina_luka = 10
+						boja = green 
+						ugao = 0 
+						pozicija = sever
+			Element end
+	Nivo end;
+	
+	Nivo drugi_sprat:
+		duzina = 15 
+		sirina = 25 
+		boja_podloge = grey
+		raspored = Koordinate: 
+			Pozicije:
+				x = 1, y = 2
+		Enterijer: 
+		// ovaj sprat je prazan	
+		
+	Nivo end
+	
+Kafic end
