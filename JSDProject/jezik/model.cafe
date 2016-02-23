@@ -6,11 +6,11 @@ Kafic begin
 		sirina = 23 
 		boja_podloge = grey
 		raspored = Grid:
-				broj_kolona = 2 
-				broj_redova = 2
+				broj_kolona = 3 
+				broj_redova = 3
 				Pozicije:
-					broj_kolone = 0, broj_reda = 0;
-					broj_kolone = 1, broj_reda = 0
+					broj_kolone = 1, broj_reda = 1;
+					broj_kolone = 1, broj_reda = 2
 		Enterijer:
 			Element "sto1":
 				Oblici:
@@ -19,7 +19,7 @@ Kafic begin
 						precnik2 = 25
 						boja = red 
 						ugao = 0 
-						pozicija = broj_kolone = 0, broj_reda = 0
+						pozicija = broj_kolone = 1, broj_reda = 1
 			Element end;
 			Element "sto2":
 				Oblici:
@@ -28,7 +28,7 @@ Kafic begin
 						precnik2 = 25
 						boja = blue 
 						ugao = 0 
-						pozicija = broj_kolone = 0, broj_reda = 1
+						pozicija = broj_kolone = 1, broj_reda = 2
 			Element end
 	Nivo end;
 	
@@ -59,10 +59,17 @@ Kafic begin
 		boja_podloge = grey
 		raspored = Koordinate: 
 			Pozicije:
-				x = 1, y = 2
+				x = 150, y = 200
 		Enterijer: 
-		// ovaj sprat je prazan	
-		
+			Element "sto4":
+				Oblici:
+					Pravougaonik: 
+						a = 30
+						b = 30
+						boja = green 
+						ugao = 0 
+						pozicija = x = 150, y = 200	
+			Element end
 	Nivo end
 	
 Kafic end
