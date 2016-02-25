@@ -66,8 +66,7 @@ class Interpreter(object):
                         atributi = OrderedDict([('Color','Color.'+oblik.boja.upper()),
                                     ('Stroke' , 'null'),
                                     ('ugao' , oblik.ugao),
-#                                     TODO ispada iz sablona po kom su odradjeni ostali graficki elementi
-#                                     'pozicija' : 'new Point2D.Double({0},{1})'.format(oblik.tipOblika.tacka.x, oblik.tipOblika.tacka.y),
+                                    ('pozicija' , 'new Point2D.Double({0},{1})'.format(oblik.tipOblika.tacka.x, oblik.tipOblika.tacka.y)),
                                     ('sirinaPravougaonika' , oblik.tipOblika.sirina_pravougaonika),
                                     ('visinaPravougaonika' , oblik.tipOblika.visina_pravougaonika),
                                     ('sirinaLuka' , oblik.tipOblika.sirina_luka),
