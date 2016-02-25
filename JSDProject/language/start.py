@@ -13,12 +13,16 @@ def javaPackageAndImports():
                       "import java.awt.Color;",
                       "import java.awt.geom.Point2D;",
                       "import java.util.ArrayList;",
+                      "import java.util.List;",
                       "import model.Canvas;",
                       "import model.Element;",
+                      "import model.Kafic;",
                       "import model.Oblik;",
                       "import model.elements.Elipsa;",
                       "import model.elements.Pravougaonik;",
                       "import model.elements.Trougao;",
+                      "import model.elements.Linija;",
+                      "import model.elements.ZaobljeniPravougaonik;",
                       "import view.MainFrame;"]
         return importList
 

@@ -55,6 +55,7 @@ Pravougaonik:
 	
 ZaobljeniPravougaonik:
 	"ZaobljeniPravougaonik" ":"
+	tacka = Tacka
 	"sirina_pravougaonika" "=" sirina_pravougaonika = INT
 	"visina_pravougaonika" "=" visina_pravougaonika = INT
 	"sirina_luka" "=" sirina_luka = INT
@@ -69,7 +70,7 @@ Elipsa:
 ;
 
 Boja:
-	"black" | "blue" | "grey" | "green" | "orange" | "pink" | "red" | "white" | "yellow"
+	"black" | "blue" | "gray" | "green" | "orange" | "pink" | "red" | "white" | "yellow"
 ;
 
 Comment:

@@ -2,45 +2,46 @@ Kafic begin
 "Skochko"
 
 	Nivo prizemlje: 
-		duzina = 10 
-		sirina = 23 
-		boja_podloge = grey
+		duzina = 500 
+		sirina = 500 
+		boja_podloge = gray
 		Enterijer:
 			Element "okrugli_sto":
 				Oblici:
 					Elipsa:
-						centar : x = 20, y = 30 
-						poluprecnik1 = 3
-						poluprecnik2 = 3
+						centar : x = 100, y = 100
+						poluprecnik1 = 120
+						poluprecnik2 = 150
 						boja = red 
 						ugao = 0 
 			Element end;
 			Element "stolica":
 				Oblici:
 					Elipsa: 
-						centar : x = 20, y = 30 
-						poluprecnik1 = 5
-						poluprecnik2 = 5
+						centar : x = 300, y = 300 
+						poluprecnik1 = 60
+						poluprecnik2 = 60
 						boja = blue 
 						ugao = 0 
 					Pravougaonik: 
-						x = 10, y = 10 
-						x = 20, y = 20
+						x = 100, y = 350 
+						x = 200, y = 450
 						boja = blue 
 						ugao = 0 
 			Element end
 	Nivo end;
 	
 	Nivo prvi_sprat: 
-		duzina = 15 
-		sirina = 25 
-		boja_podloge = grey
+		duzina = 450 
+		sirina = 450
+		boja_podloge = gray
 		Enterijer:
 			Element "sank":
 				Oblici:
 					ZaobljeniPravougaonik: 
-						sirina_pravougaonika = 30
-						visina_pravougaonika = 30
+						x = 120, y = 120 
+						sirina_pravougaonika = 65
+						visina_pravougaonika = 75
 						sirina_luka = 10 
 						visina_luka = 10
 						boja = green 
@@ -49,9 +50,9 @@ Kafic begin
 	Nivo end;
 	
 	Nivo drugi_sprat:
-		duzina = 15 
-		sirina = 25 
-		boja_podloge = grey
+		duzina = 500 
+		sirina = 300
+		boja_podloge = gray
 		Enterijer: 
 		// ovaj sprat je prazan	
 		
