@@ -73,7 +73,7 @@ Elipsa:
 ;
 
 Boja:
-	"black" | "blue" | "grey" | "green" | "orange" | "pink" | "red" | "white" | "yellow"
+	"black" | "blue" | "gray" | "green" | "orange" | "pink" | "red" | "white" | "yellow"
 ;
 
 Raspored:
@@ -94,7 +94,7 @@ Koordinate:
 
 StraneSveta:
 	"StraneSveta" ":"
-	"Pozicije" ":" pozicije += Pozicija[";"]
+	"Pozicije" ":" pozicije += StraneSvetaPozicija[";"]
 ;
 
 Pozicija:
@@ -107,10 +107,14 @@ GridPozicija:
 ;
 
 KoordinatePozicija:
-	pozicija += Tacka
+	koordinate += Tacka[";"]
 ;
 
 StraneSvetaPozicija:
+	strana_sveta = TipStraneSveta
+;
+
+TipStraneSveta:
 	"sever" | "jug" | "istok" | "zapad" | "severoistok" | "severozapad" | "jugoistok" | "jugozapad" | "centar" 
 ;
 

@@ -2,73 +2,136 @@ Kafic begin
 "Skochko"
 
 	Nivo prizemlje: 
-		duzina = 10 
-		sirina = 23 
-		boja_podloge = grey
+		duzina = 600 
+		sirina = 600
+		boja_podloge = white
 		raspored = Grid:
 				broj_kolona = 3 
 				broj_redova = 3
 				Pozicije:
+					broj_kolone = 0, broj_reda = 0;				// napomena: zadavati brojeve od 0 do broj_kolona i broj_redova - 1
+					broj_kolone = 1, broj_reda = 0;
 					broj_kolone = 1, broj_reda = 1;
 					broj_kolone = 1, broj_reda = 2
 		Enterijer:
 			Element "sto1":
 				Oblici:
 					Elipsa:
-						precnik1 = 25
-						precnik2 = 25
-						boja = red 
+						precnik1 = 150
+						precnik2 = 100
+						boja = pink 
 						ugao = 0 
-						pozicija = broj_kolone = 1, broj_reda = 1
+						pozicija = broj_kolone = 0, broj_reda = 0
 			Element end;
 			Element "sto2":
 				Oblici:
-					Elipsa: 
-						precnik1 = 25
-						precnik2 = 25
-						boja = blue 
+					Pravougaonik: 
+						a = 160
+						b = 160
+						boja = yellow 
+						ugao = 0 
+						pozicija = broj_kolone = 1, broj_reda = 0
+			Element end;
+			Element "sto3":
+				Oblici:
+					Trougao: 
+						a = 100
+						b = 100
+						c = 100
+						boja = green 
+						ugao = 0 
+						pozicija = broj_kolone = 1, broj_reda = 1
+			Element end;
+			Element "sto4":
+				Oblici:
+					ZaobljeniPravougaonik: 
+						a = 160
+						b = 160
+						sirina_luka = 10
+						visina_luka = 10
+						boja = orange 
 						ugao = 0 
 						pozicija = broj_kolone = 1, broj_reda = 2
 			Element end
 	Nivo end;
 	
 	Nivo prvi_sprat: 
-		duzina = 15 
-		sirina = 25 
-		boja_podloge = grey
+		duzina = 500 
+		sirina = 600 
+		boja_podloge = white
 		raspored = StraneSveta:
 				Pozicije:
-					sever
+					zapad;
+					centar;
+					istok;
+					jug
 		Enterijer:
-			Element "sto3":
+			Element "paravan":
+				Oblici:
+					Linija: 
+						a = 100
+						boja = yellow 
+						ugao = 0 
+						pozicija = zapad
+			Element end;
+			Element "sto5":
 				Oblici:
 					ZaobljeniPravougaonik: 
-						a = 30
-						b = 30
-						sirina_luka = 10 
-						visina_luka = 10
-						boja = green 
+						a = 160
+						b = 160
+						sirina_luka = 15
+						visina_luka = 15
+						boja = blue 
 						ugao = 0 
-						pozicija = sever
-			Element end
-	Nivo end;
-	
-	Nivo drugi_sprat:
-		duzina = 15 
-		sirina = 25 
-		boja_podloge = grey
-		raspored = Koordinate: 
-			Pozicije:
-				x = 150, y = 200
-		Enterijer: 
-			Element "sto4":
+						pozicija = centar
+			Element end;
+			Element "sto6":
 				Oblici:
 					Pravougaonik: 
-						a = 30
-						b = 30
-						boja = green 
+						a = 100
+						b = 160
+						boja = gray 
 						ugao = 0 
-						pozicija = x = 150, y = 200	
+						pozicija = istok
+			Element end;
+			Element "sto7":
+				Oblici:
+					Elipsa: 
+						precnik1 = 60
+						precnik2 = 60
+						boja = yellow 
+						ugao = 0 
+						pozicija = jug
+			Element end
+	Nivo end;
+
+	Nivo drugi_sprat:
+		duzina = 600 
+		sirina = 600 
+		boja_podloge = white
+		raspored = Koordinate: 
+			Pozicije:
+				x = 150, y = 200;
+				x = 150, y = 200
+		Enterijer: 
+			Element "sto8":
+				Oblici:
+					Trougao:
+						a = 100
+						b = 100
+						c = 100
+						boja = red 
+						ugao = 0 
+						pozicija = x = 50, y = 50; x = 150, y = 50; x = 50, y = 100
+			Element end;
+			Element "sto9":
+				Oblici:
+					Pravougaonik:
+						a = 100
+						b = 100
+						boja = green 
+						ugao = 10 
+						pozicija = x = 100, y = 360; x = 200, y = 360; x = 200, y = 450; x = 100, y = 450
 			Element end
 	Nivo end
 	
